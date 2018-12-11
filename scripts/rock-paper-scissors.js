@@ -8,7 +8,7 @@ const play = document.getElementById("play");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
-const choices = ["rock", "paper", "scissor"];
+const choices = ["rock", "paper", "scissors"];
 
 function main() {
 	rock.addEventListener("click", function(){
@@ -18,8 +18,6 @@ function main() {
 	paper.addEventListener("click", function(){
 		game("paper");
 	});
-
-
 	scissors.addEventListener("click", function(){
 		game("scissors");
 	});
@@ -28,6 +26,7 @@ function main() {
 function game(playerMove) {
 	let cMove = computerMove();
 	let val = playerMove + cMove;
+	console.log(val);
 	move(playerMove, cMove);
 	switch(val) {
 		case "rockscissors":
